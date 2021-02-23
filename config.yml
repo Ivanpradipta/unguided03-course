@@ -1,0 +1,16 @@
+title: unguided03
+description: percabangan control
+template:
+  repo: unguided03-template
+  name: unguided03
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
